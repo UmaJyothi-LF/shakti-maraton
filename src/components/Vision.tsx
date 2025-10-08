@@ -40,7 +40,7 @@ const Vision = () => {
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">Our Motto</h2>
             <div className="w-24 h-1 bg-[#ff7f32] mb-8"></div>
             <p className="text-white/90 text-lg leading-relaxed mb-6">
-              The Samvidhan Shakti Run is more than a 3km run – it is a collective stride towards spreading awareness of the Indian Constitution, the foundation of our democracy. By running together, we celebrate the spirit of equality, liberty, justice, and fraternity enshrined in our Constitution.
+              The Samvidhan Shakti Run is more than a 3k and 5k run – it is a collective stride towards spreading awareness of the Indian Constitution, the foundation of our democracy. By running together, we celebrate the spirit of equality, liberty, justice, and fraternity enshrined in our Constitution.
             </p>
           </div>
 
