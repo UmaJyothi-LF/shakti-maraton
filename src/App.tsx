@@ -11,9 +11,9 @@ import Partners from './components/Partners';
 import Footer from './components/Footer';
 
 function App() {
-  // 👇 Replace this with your actual WhatsApp number & message
+  
   const whatsappLink =
-    'https://wa.me/911234567890?text=Hi!%20I%20want%20to%20know%20more%20about%20Samvidhan%20Shakti%20Run.';
+    '#';
 
   return (
     <div className="min-h-screen relative">
@@ -31,7 +31,7 @@ function App() {
         <Footer />
       </div>
 
-      {/* 👇 Floating WhatsApp Icon */}
+     
       <a
         href={whatsappLink}
         target="_blank"
@@ -39,7 +39,7 @@ function App() {
         className="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#20ba5a] hover:scale-110 transition-all flex items-center justify-center z-50"
         title="Chat with us on WhatsApp"
       >
-        {/* ✅ Official WhatsApp SVG */}
+        
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="28"

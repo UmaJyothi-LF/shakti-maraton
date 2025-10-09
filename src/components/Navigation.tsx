@@ -42,7 +42,7 @@ const Navigation = () => {
     }
   };
 
-  // 👇 New function to scroll to the top when logo clicked
+  
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     setActiveSection('home');
@@ -54,7 +54,7 @@ const Navigation = () => {
       <nav className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            {/* 👇 Logo clickable to scroll to top */}
+            
             <div
               className="flex items-center space-x-3 cursor-pointer"
               onClick={scrollToTop}
