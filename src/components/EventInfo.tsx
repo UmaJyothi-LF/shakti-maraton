@@ -84,7 +84,8 @@ const EventInfo = () => {
                 <MapPin className="mr-4 text-[#ff7f32] flex-shrink-0 mt-1" size={24} />
                 <div>
                   <p className="font-semibold text-lg mb-1">Venue</p>
-                  <p className="text-white/90">Necklace Road, Hyderabad</p>
+                  <p className="text-white/90">
+Sanjeevaiah Park, Necklace Road, Hyderabad</p>
                 </div>
               </div>
               <div className="flex items-start">

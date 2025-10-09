@@ -11,7 +11,7 @@ const FAQ = () => {
     },
     {
       question: 'What are the registration fees I have to pay?',
-      answer: `5 KM Run - ₹799 Early Bird Fee and ₹599 Regular Fee\n3 KM Run - ₹399 Early Bird Fee and ₹499 Regular Fee`,
+      answer: `5K Run - ₹799 Early Bird Fee and ₹599 Regular Fee\n3K Run - ₹399 Early Bird Fee and ₹499 Regular Fee`,
     },
     {
       question: 'What does the registration fee cover?',
@@ -44,7 +44,7 @@ const FAQ = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-[#0A2F6F] mb-6">Frequently Asked Questions</h2>
-          <div className="w-24 h-1 bg-[#F6B72F] mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-[#FF7F32] mx-auto mb-8"></div>
           <p className="text-lg text-gray-700">Got questions? We've got answers!</p>
         </div>
 

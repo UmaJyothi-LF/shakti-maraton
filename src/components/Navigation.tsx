@@ -6,11 +6,11 @@ const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'event-info', label: 'Event Info' },
+    // { id: 'home', label: 'Home' },
+    { id: 'about', label: 'About The Run' },
+    // { id: 'event-info', label: 'Event Info' },
     { id: 'registration', label: 'Registration' },
-    { id: 'media', label: 'Media' },
+    // { id: 'media', label: 'Media' },
     { id: 'faq', label: "FAQ's" },
     { id: 'partners', label: 'Partners' },
     { id: 'contact', label: 'Contact' },
@@ -42,12 +42,23 @@ const Navigation = () => {
     }
   };
 
+  // 👇 New function to scroll to the top when logo clicked
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setActiveSection('home');
+    setMobileMenuOpen(false);
+  };
+
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            <div className="flex items-center space-x-3">
+            {/* 👇 Logo clickable to scroll to top */}
+            <div
+              className="flex items-center space-x-3 cursor-pointer"
+              onClick={scrollToTop}
+            >
               <div className="w-12 h-12 bg-[#F6B72F] rounded-full flex items-center justify-center text-[#002868] font-extrabold text-xl">
                 S
               </div>

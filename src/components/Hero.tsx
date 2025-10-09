@@ -52,7 +52,7 @@ const Hero = () => {
 
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-8 mb-8 shadow-xl max-w-3xl mx-auto">
             <div className="mb-4">
-              <h3 className="text-xl sm:text-2xl font-bold text-[#002868]">Race Day Countdown</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-[#002868]">30th November 2025</h3>
             </div>
             <div className="grid grid-cols-4 gap-2 sm:gap-4 max-w-xl mx-auto">
               {Object.entries(timeLeft).map(([unit, value]) => (
