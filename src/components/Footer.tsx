@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* About Section */}
           <div>
-            <h3 className="text-2xl font-bold mb-6 text-[#F6B72F]">The Samvidhan Shakti Run</h3>
+            <h3 className="text-2xl font-bold mb-6 text-[#F6B72F]">Samvidhan Shakti Run</h3>
             <p className="text-white/90 leading-relaxed">
               Running together to celebrate and uphold the constitutional values that strengthen our democracy.
             </p>
@@ -35,7 +35,8 @@ const Footer = () => {
               </div>
               <div className="flex items-start">
                 <MapPin className="mr-3 flex-shrink-0 text-[#FF7F32]" size={20} />
-                <span>Necklace Road, Hyderabad</span>
+                <span>
+Sanjeevaiah Park, Necklace Road, Hyderabad</span>
               </div>
             </div>
           </div>
@@ -69,7 +70,7 @@ const Footer = () => {
         {/* --- Bottom Section --- */}
         <div className="border-t border-white/20 pt-8 text-center">
           <p className="text-white/80">
-            © 2025 The Samvidhan Shakti Run. All rights reserved. | Built with pride for democracy.
+            © 2025 Samvidhan Shakti Run. All rights reserved. | Built with pride for democracy.
           </p>
           <p className="text-sm text-[#F6B72F] mt-2">
             #Unity • #Justice • #Equality • #Liberty

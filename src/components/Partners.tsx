@@ -28,7 +28,7 @@ const Partners = () => {
             </div>
             <div className="flex items-start">
               <div className="w-2 h-2 bg-[#FF7F32] rounded-full mt-2 mr-3 flex-shrink-0"></div>
-              <p>Opportunity to engage with 5000+ participants and their families</p>
+              <p>Opportunity to engage with 1500+ participants and their families</p>
             </div>
             <div className="flex items-start">
               <div className="w-2 h-2 bg-[#FF7F32] rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -51,9 +51,9 @@ const Partners = () => {
           {[1, 2, 3, 4].map((num) => (
             <div
               key={num}
-              // className="bg-[#F4F4F4] rounded-2xl p-6 flex items-center justify-center h-24 hover:shadow-lg transition-shadow"
+              className="bg-[#F4F4F4] rounded-2xl p-6 flex items-center justify-center h-24 hover:shadow-lg transition-shadow"
             >
-              {/* <span className="text-[#0A2F6F] font-bold text-lg">Partner Logo {num}</span> */}
+              { <span className="text-[#0A2F6F] font-bold text-lg">Partner Logo {num}</span> }
             </div>
           ))}
         </div>
