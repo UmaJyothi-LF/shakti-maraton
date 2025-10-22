@@ -42,7 +42,6 @@ const Navigation = () => {
     }
   };
 
-  
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     setActiveSection('home');
@@ -55,13 +54,18 @@ const Navigation = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             
+            {/* Logo Section */}
             <div
               className="flex items-center space-x-3 cursor-pointer"
               onClick={scrollToTop}
             >
-              <div className="w-12 h-12 bg-[#F6B72F] rounded-full flex items-center justify-center text-[#002868] font-extrabold text-xl">
-                S
-              </div>
+              {/* Updated logo image */}
+              <img
+                src="/images/samvidan-logo.jpg"
+                alt="Samvidhan Shakti Run Logo"
+                className="w-14 h-14 rounded-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+              
               <span className="text-[#F6B72F] font-bold text-xl hidden sm:block">
                 Samvidhan Shakti Run
               </span>
@@ -70,6 +74,7 @@ const Navigation = () => {
               </span>
             </div>
 
+            {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-6">
               {navItems.map((item) => (
                 <button
@@ -92,6 +97,7 @@ const Navigation = () => {
               </button>
             </div>
 
+            {/* Mobile Menu Button */}
             <button
               className="lg:hidden text-[#F6B72F]"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -101,6 +107,7 @@ const Navigation = () => {
           </div>
         </div>
 
+        {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="lg:hidden bg-[#002868] border-t border-[#F6B72F]">
             <div className="px-4 pt-2 pb-4 space-y-2">

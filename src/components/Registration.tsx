@@ -4,11 +4,16 @@ import { ArrowRight, ArrowLeft, CheckCircle } from 'lucide-react';
 const Registration = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    age: '',
+    firstName: '',
+    lastName: '',
+    bibName: '',
     gender: '',
-    raceCategory: '',
+    dob: '',
+    tshirtSize: '',
+    category: '',
+    phone: '',
+    email: '',
+    emergencyPhone: '',
   });
   const [submitted, setSubmitted] = useState(false);
 
@@ -29,11 +34,16 @@ const Registration = () => {
     setTimeout(() => {
       setStep(1);
       setFormData({
-        fullName: '',
-        email: '',
-        age: '',
+        firstName: '',
+        lastName: '',
+        bibName: '',
         gender: '',
-        raceCategory: '',
+        dob: '',
+        tshirtSize: '',
+        category: '',
+        phone: '',
+        email: '',
+        emergencyPhone: '',
       });
       setSubmitted(false);
     }, 3000);
@@ -72,9 +82,7 @@ const Registration = () => {
               <div key={num} className="flex items-center">
                 <div
                   className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center font-bold text-lg transition-all ${
-                    step >= num
-                      ? 'bg-[#002868] text-white'
-                      : 'bg-gray-200 text-gray-500'
+                    step >= num ? 'bg-[#002868] text-white' : 'bg-gray-200 text-gray-500'
                   }`}
                 >
                   {num}
@@ -90,62 +98,111 @@ const Registration = () => {
             ))}
           </div>
 
-          {/* Step 1: Personal Info */}
+          {/* Step 1: Runner Details */}
           {step === 1 && (
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-[#002868] mb-6">Personal Information</h3>
-              <div>
-                <label className="block text-gray-700 font-semibold mb-2">Full Name</label>
-                <input
-                  type="text"
-                  name="fullName"
-                  value={formData.fullName}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-[#FF7F32] focus:outline-none transition-colors"
-                  placeholder="Enter your full name"
-                />
-              </div>
-              <div>
-                <label className="block text-gray-700 font-semibold mb-2">Email Address</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-[#FF7F32] focus:outline-none transition-colors"
-                  placeholder="your.email@example.com"
-                />
-              </div>
+              <h3 className="text-2xl font-bold text-[#002868] mb-6">Runner Details</h3>
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-gray-700 font-semibold mb-2">Age</label>
+                  <label className="block text-gray-700 font-semibold mb-2">First Name*</label>
                   <input
-                    type="number"
-                    name="age"
-                    value={formData.age}
+                    type="text"
+                    name="firstName"
+                    value={formData.firstName}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-[#FF7F32] focus:outline-none transition-colors"
-                    placeholder="Your age"
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-[#FF7F32] focus:outline-none"
+                    placeholder="Enter your first name"
                   />
                 </div>
                 <div>
-                  <label className="block text-gray-700 font-semibold mb-2">Gender</label>
+                  <label className="block text-gray-700 font-semibold mb-2">Last Name*</label>
+                  <input
+                    type="text"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-[#FF7F32] focus:outline-none"
+                    placeholder="Enter your last name"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-gray-700 font-semibold mb-2">Bib Name*</label>
+                <input
+                  type="text"
+                  name="bibName"
+                  value={formData.bibName}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-[#FF7F32] focus:outline-none"
+                  placeholder="Name to print on Bib"
+                />
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div>
+                  <label className="block text-gray-700 font-semibold mb-2">Gender*</label>
                   <select
                     name="gender"
                     value={formData.gender}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-[#FF7F32] focus:outline-none transition-colors"
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-[#FF7F32] focus:outline-none"
                   >
-                    <option value="">Select gender</option>
+                    <option value="">Please select</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="other">Other</option>
                   </select>
                 </div>
+
+                <div>
+                  <label className="block text-gray-700 font-semibold mb-2">Date of Birth*</label>
+                  <input
+                    type="date"
+                    name="dob"
+                    value={formData.dob}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-[#FF7F32] focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-gray-700 font-semibold mb-2">T-Shirt Size*</label>
+                  <select
+                    name="tshirtSize"
+                    value={formData.tshirtSize}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-[#FF7F32] focus:outline-none"
+                  >
+                    <option value="">Please select</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                  </select>
+                </div>
               </div>
+
+              {/* New Category Dropdown */}
+              <div>
+                <label className="block text-gray-700 font-semibold mb-2">Category*</label>
+                <select
+                  name="category"
+                  value={formData.category}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-[#FF7F32] focus:outline-none"
+                >
+                  <option value="">Please select</option>
+                  <option value="3k">3K Run</option>
+                  <option value="5k">5K Run</option>
+                </select>
+              </div>
+
               <button
                 onClick={handleNext}
-                className="w-full bg-[#FF7F32] text-white py-4 rounded-xl font-bold text-lg hover:bg-[#002868] transition-all transform hover:scale-105 flex items-center justify-center"
+                className="w-full bg-[#FF7F32] text-white py-4 rounded-xl font-bold text-lg hover:bg-[#002868] transition-all flex items-center justify-center"
               >
                 Continue
                 <ArrowRight className="ml-2" size={20} />
@@ -153,38 +210,47 @@ const Registration = () => {
             </div>
           )}
 
-          {/* Step 2: Race Selection */}
+          {/* Step 2: Contact Details */}
           {step === 2 && (
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-[#002868] mb-6">Select Race Category</h3>
-              <div className="space-y-4">
-                {[
-                  { label: '3K Run', value: '3k', desc: 'Perfect for beginners and families', price: '₹500' },
-                  { label: '5K Run', value: '5k', desc: 'Challenge yourself on the scenic route', price: '₹750' },
-                ].map((race) => (
-                  <label key={race.value} className="block">
-                    <input
-                      type="radio"
-                      name="raceCategory"
-                      value={race.value}
-                      checked={formData.raceCategory === race.value}
-                      onChange={handleInputChange}
-                      className="hidden"
-                    />
-                    <div
-                      className={`border-2 rounded-xl p-6 cursor-pointer transition-all ${
-                        formData.raceCategory === race.value
-                          ? 'border-[#FF7F32] bg-[#FF7F32]/10'
-                          : 'border-gray-300 hover:border-[#002868]'
-                      }`}
-                    >
-                      <h4 className="text-xl font-bold text-[#002868] mb-2">{race.label}</h4>
-                      <p className="text-gray-600 mb-2">{race.desc}</p>
-                      <p className="text-2xl font-bold text-[#FF7F32]">{race.price}</p>
-                    </div>
-                  </label>
-                ))}
+              <h3 className="text-2xl font-bold text-[#002868] mb-6">Your Contact Details</h3>
+
+              <div>
+                <label className="block text-gray-700 font-semibold mb-2">Phone Number*</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-[#FF7F32] focus:outline-none"
+                  placeholder="Enter phone number (without +91)"
+                />
               </div>
+
+              <div>
+                <label className="block text-gray-700 font-semibold mb-2">Email*</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-[#FF7F32] focus:outline-none"
+                  placeholder="your.email@example.com"
+                />
+              </div>
+
+              <div>
+                <label className="block text-gray-700 font-semibold mb-2">Emergency Phone Number*</label>
+                <input
+                  type="tel"
+                  name="emergencyPhone"
+                  value={formData.emergencyPhone}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-[#FF7F32] focus:outline-none"
+                  placeholder="Emergency contact (without +91)"
+                />
+              </div>
+
               <div className="flex gap-4">
                 <button
                   onClick={handleBack}
@@ -208,18 +274,23 @@ const Registration = () => {
           {step === 3 && (
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-[#002868] mb-6">Payment Information</h3>
+
               <div className="bg-gray-50 rounded-xl p-6 mb-6">
                 <h4 className="font-bold text-[#002868] mb-2">Registration Summary</h4>
                 <div className="space-y-2 text-gray-700">
-                  <p><span className="font-semibold">Name:</span> {formData.fullName}</p>
+                  <p><span className="font-semibold">Name:</span> {formData.firstName} {formData.lastName}</p>
                   <p><span className="font-semibold">Email:</span> {formData.email}</p>
-                  <p><span className="font-semibold">Category:</span> {formData.raceCategory === '3k' ? '3K Run - ₹500' : '5K Run - ₹750'}</p>
+                  <p><span className="font-semibold">Phone:</span> {formData.phone}</p>
+                  <p><span className="font-semibold">Category:</span> {formData.category === '3k' ? '3K Run' : formData.category === '5k' ? '5K Run' : '-'}</p>
+                  <p><span className="font-semibold">T-Shirt Size:</span> {formData.tshirtSize}</p>
                 </div>
               </div>
+
               <div className="border-2 border-gray-300 rounded-xl p-6 text-center">
                 <p className="text-gray-600 mb-4">Payment gateway integration would appear here</p>
                 <div className="text-sm text-gray-500">Secure payment powered by trusted providers</div>
               </div>
+
               <div className="flex gap-4">
                 <button
                   onClick={handleBack}
