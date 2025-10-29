@@ -9,7 +9,7 @@ const Navigation = () => {
     // { id: 'home', label: 'Home' },
     { id: 'about', label: 'About The Run' },
     // { id: 'event-info', label: 'Event Info' },
-    { id: 'registration', label: 'Registration' },
+    // { id: 'registration', label: 'Registration' },
     // { id: 'media', label: 'Media' },
     { id: 'faq', label: "FAQ's" },
     { id: 'partners', label: 'Partners' },
@@ -53,25 +53,17 @@ const Navigation = () => {
       <nav className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            
+
             {/* Logo Section */}
             <div
-              className="flex items-center space-x-3 cursor-pointer"
+              className="flex items-center space-x-4 cursor-pointer w-[16%]"
               onClick={scrollToTop}
             >
-              {/* Updated logo image */}
               <img
-                src="/images/samvidan-logo.jpg"
+                src="images/samvidan-logo.png"
                 alt="Samvidhan Shakti Run Logo"
-                className="w-14 h-14 rounded-full object-cover hover:scale-105 transition-transform duration-300"
+                className="w-[100%] h-20 object-cover"
               />
-              
-              <span className="text-[#F6B72F] font-bold text-xl hidden sm:block">
-                Samvidhan Shakti Run
-              </span>
-              <span className="text-[#F6B72F] font-bold text-lg sm:hidden">
-                SSR
-              </span>
             </div>
 
             {/* Desktop Navigation */}
@@ -89,12 +81,16 @@ const Navigation = () => {
                   {item.label}
                 </button>
               ))}
-              <button
-                onClick={() => scrollToSection('registration')}
+
+              {/* Register button (external link) */}
+              <a
+                href="https://allevents.in/hyderabad/samvidhan-shakti-run-tickets/80002389271233"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-[#F6B72F] text-[#002868] px-6 py-2 rounded-full font-bold hover:bg-[#FF7F32] hover:text-white transition-all transform hover:scale-105"
               >
                 Register
-              </button>
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -124,12 +120,16 @@ const Navigation = () => {
                   {item.label}
                 </button>
               ))}
-              <button
-                onClick={() => scrollToSection('registration')}
-                className="w-full bg-[#F6B72F] text-[#002868] px-6 py-3 rounded-full font-bold hover:bg-[#FF7F32] hover:text-white transition-all mt-2"
+
+              {/* Register Now button (external link for mobile) */}
+              <a
+                href="https://allevents.in/hyderabad/samvidhan-shakti-run-tickets/80002389271233"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full bg-[#F6B72F] text-[#002868] px-6 py-3 rounded-full font-bold hover:bg-[#FF7F32] hover:text-white transition-all mt-2 text-center"
               >
                 Register Now
-              </button>
+              </a>
             </div>
           </div>
         )}

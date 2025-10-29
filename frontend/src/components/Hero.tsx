@@ -26,12 +26,15 @@ const Hero = () => {
     return () => clearInterval(timer);
   }, [targetDate]);
 
-  const scrollToRegistration = () => {
-    document.getElementById('registration')?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const registrationUrl =
+    'https://allevents.in/hyderabad/samvidhan-shakti-run-tickets/80002389271233';
 
   return (
-    <section id="home" className="relative min-h-[91vh] flex items-center justify-center overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-[91vh] flex items-center justify-center overflow-hidden"
+    >
+      {/* Background image and overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -41,6 +44,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-[#FF7F32]/50 via-[#002868]/60 to-[#008751]/70"></div>
       </div>
 
+      {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <div className="animate-fadeIn">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-3 leading-tight">
@@ -50,9 +54,12 @@ const Hero = () => {
             Run Together, Uphold Justice
           </p>
 
+          {/* Countdown timer */}
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-8 mb-8 shadow-xl max-w-3xl mx-auto">
             <div className="mb-4">
-              <h3 className="text-xl sm:text-2xl font-bold text-[#002868]">30th November 2025</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-[#002868]">
+                30th November 2025
+              </h3>
             </div>
             <div className="grid grid-cols-4 gap-2 sm:gap-4 max-w-xl mx-auto">
               {Object.entries(timeLeft).map(([unit, value]) => (
@@ -70,19 +77,25 @@ const Hero = () => {
             </div>
           </div>
 
+          {/* Register buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 justify-center items-center">
-            <button
-              onClick={scrollToRegistration}
-              className="w-full sm:w-auto bg-[#002868] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-lg font-bold hover:bg-[#002868] hover:text-white transition-all transform hover:scale-105 shadow-lg"
+            <a
+              href={registrationUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto bg-[#002868] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-lg font-bold hover:bg-[#001f5c] transition-all transform hover:scale-105 shadow-lg text-center"
             >
-              Register for 3k
-            </button>
-            <button
-              onClick={scrollToRegistration}
-              className="w-full sm:w-auto bg-[#FF7F32] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-lg font-bold hover:bg-[#FF7F32] hover:text-white transition-all transform hover:scale-105 shadow-lg"
+              Register for 3K
+            </a>
+
+            <a
+              href={registrationUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto bg-[#FF7F32] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-lg font-bold hover:bg-[#e96b1c] transition-all transform hover:scale-105 shadow-lg text-center"
             >
-              Register for 5k
-            </button>
+              Register for 5K
+            </a>
           </div>
         </div>
       </div>

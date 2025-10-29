@@ -1,11 +1,13 @@
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   return (
     <footer id="contact" className="bg-[#002868] text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
         {/* --- Top Section --- */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          
           {/* About Section */}
           <div>
             <h3 className="text-2xl font-bold mb-6 text-[#F6B72F]">Samvidhan Shakti Run</h3>
@@ -21,10 +23,10 @@ const Footer = () => {
               <div className="flex items-start">
                 <Mail className="mr-3 flex-shrink-0 text-[#FF7F32]" size={20} />
                 <a
-                  href="mailto:info@samvidhanshaktirun.org"
+                  href="mailto:ssr@eknayeedisha.com"
                   className="hover:text-[#FF7F32] transition-colors"
                 >
-                  info@samvidhanshaktirun.org
+                  ssr@eknayeedisha.com
                 </a>
               </div>
               <div className="flex items-start">
@@ -35,8 +37,7 @@ const Footer = () => {
               </div>
               <div className="flex items-start">
                 <MapPin className="mr-3 flex-shrink-0 text-[#FF7F32]" size={20} />
-                <span>
-Sanjeevaiah Park, Necklace Road, Hyderabad</span>
+                <span>Sanjeevaiah Park, Necklace Road, Hyderabad</span>
               </div>
             </div>
           </div>
@@ -46,22 +47,35 @@ Sanjeevaiah Park, Necklace Road, Hyderabad</span>
             <h4 className="text-xl font-bold mb-6 text-[#F6B72F]">Follow Us</h4>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/share/1A7ALULGzM/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FF7F32] hover:text-[#002868] transition-all"
               >
                 <Facebook size={24} />
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FF7F32] hover:text-[#002868] transition-all"
               >
                 <Twitter size={24} />
-              </a>
+              </a> */}
               <a
-                href="#"
+                href="https://www.instagram.com/samvidhanshaktirun?utm_source=qr&igsh=MXd4bjdyZ2JvemUyYw=="
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FF7F32] hover:text-[#002868] transition-all"
               >
                 <Instagram size={24} />
+              </a>
+              {/* ✅ New LinkedIn Icon */}
+              <a
+                href="https://www.linkedin.com/company/samvidhan-shakti-run"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FF7F32] hover:text-[#002868] transition-all"
+              >
+                <Linkedin size={24} />
               </a>
             </div>
           </div>

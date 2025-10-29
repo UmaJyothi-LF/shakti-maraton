@@ -3,10 +3,13 @@ import Hero from './components/Hero';
 import About from './components/About';
 import EventInfo from './components/EventInfo';
 import Vision from './components/Vision';
+import ChairmansMessage from './components/ChairmanMessage';
 import ChiefGuests from './components/ChiefGuests';
-import Registration from './components/Registration';
+//import Registration from './components/Registration';
 // import Media from './components/Media';
+
 import FAQ from './components/FAQ';
+import MediaPartners from './components/MediaPartners';
 import Partners from './components/Partners';
 import Footer from './components/Footer';
 
@@ -23,10 +26,12 @@ function App() {
         <About />
         <EventInfo />
         <Vision />
+        <ChairmansMessage/>
         <ChiefGuests />
-        <Registration />
+        {/* <Registration /> */}
         {/* <Media /> */}
         <FAQ />
+        <MediaPartners />
         <Partners />
         <Footer />
       </div>
