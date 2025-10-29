@@ -36,10 +36,7 @@ const Hero = () => {
     >
       {/* Background image and overlay */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('images/running-image.jpg')",
-        }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/images/running-image.jpg')]"
       >
         <div className="absolute inset-0 bg-gradient-to-b from-[#FF7F32]/50 via-[#002868]/60 to-[#008751]/70"></div>
       </div>

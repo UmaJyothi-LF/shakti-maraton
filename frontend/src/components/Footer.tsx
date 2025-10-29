@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -22,10 +22,7 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-start">
                 <Mail className="mr-3 flex-shrink-0 text-[#FF7F32]" size={20} />
-                <a
-                  href="mailto:ssr@eknayeedisha.com"
-                  className="hover:text-[#FF7F32] transition-colors"
-                >
+                <a href="mailto:ssr@eknayeedisha.com" className="hover:text-[#FF7F32] transition-colors">
                   ssr@eknayeedisha.com
                 </a>
               </div>
@@ -50,29 +47,27 @@ const Footer = () => {
                 href="https://www.facebook.com/share/1A7ALULGzM/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit our Facebook page"
                 className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FF7F32] hover:text-[#002868] transition-all"
               >
                 <Facebook size={24} />
               </a>
-              {/* <a
-                href="#"
-                className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FF7F32] hover:text-[#002868] transition-all"
-              >
-                <Twitter size={24} />
-              </a> */}
+
               <a
                 href="https://www.instagram.com/samvidhanshaktirun?utm_source=qr&igsh=MXd4bjdyZ2JvemUyYw=="
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit our Instagram page"
                 className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FF7F32] hover:text-[#002868] transition-all"
               >
                 <Instagram size={24} />
               </a>
-              {/* ✅ New LinkedIn Icon */}
+
               <a
                 href="https://www.linkedin.com/company/samvidhan-shakti-run"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit our LinkedIn page"
                 className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FF7F32] hover:text-[#002868] transition-all"
               >
                 <Linkedin size={24} />
